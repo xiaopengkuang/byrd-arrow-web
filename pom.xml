@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.arrow</groupId>
+    <artifactId>byrd-arrow-web</artifactId>
+    <packaging>pom</packaging>
+    <version>0.1-SNAPSHOT</version>
+    <modules>
+        <module>arrow-blog</module>
+    </modules>
+
+    <properties>
+        <thrift.version>0.10.0</thrift.version>
+        <spring.context.version>5.0.0.RELEASE</spring.context.version>
+        <spring.tx.version>5.0.0.RELEASE</spring.tx.version>
+        <spring.boot.version>1.5.8.RELEASE</spring.boot.version>
+        <slf4j.api.version>1.7.25</slf4j.api.version>
+        <logback-classic.version>1.1.7</logback-classic.version>
+        <logback-core.version>1.1.7</logback-core.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--spring begin-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.context.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.tx.version}</version>
+            </dependency>
+            <!--spring end-->
+
+            <!--spring boot begin-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot</artifactId>
+                <version>${spring.boot.version}</version>
+            </dependency>
+            <!--spring boot end-->
+
+            <!--thrift begin-->
+            <dependency>
+                <groupId>org.apache.thrift</groupId>
+                <artifactId>libthrift</artifactId>
+                <version>${thrift.version}</version>
+            </dependency>
+            <!--thrift end -->
+
+            <!--log  begin-->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback-classic.version}</version>
+            </dependency>
+            <!--log end-->
+        </dependencies>
+    </dependencyManagement>
+</project>
